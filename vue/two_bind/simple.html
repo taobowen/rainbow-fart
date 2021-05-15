@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head></head>
+    <body>
+        <input id="input" type="text" onInput="handleInput()"/>
+        <button onClick="handleClickButton()">点击添加</button>
+    </body>
+    <script type="text/javascript">
+        let inputValue = {
+            value: 1
+        };
+
+        let handleInput = () => {
+            inputValue.value = inputDom.value;
+        }
+
+        let handleClickButton = () => {
+            inputValue.value ++;
+        }
+
+        let inputDom = document.getElementById("input");
+        inputDom.value = inputValue.value;
+
+        Object.defineProperty(inputValue, "value", {
+            get: function () {
+                return inputDom.value;
+            },
+            set: function (val) {
+                console.log('set', val);
+                inputDom.value = val;
+            }
+        });
+    </script>
+</html>

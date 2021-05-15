@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head></head>
+    <body>
+        <input id="input" type="text" onInput="handleInput()"/>
+        <button onClick="handleClickButton()">点击添加</button>
+    </body>
+    <script type="text/javascript">
+        let inputDom = document.getElementById("input");
+        let targetValue = {
+            value: 1
+        },
+            inputValue = new Proxy(targetValue, {
+                get (target, key, receiver) {
+                    return Reflect.get(...arguments);
+                },
+                set (target, key, value, receiver) {
+                    Reflect.set(...arguments);
+                    inputDom.value = value;
+                }
+            });
+        
+        let handleInput = () => {
+            inputValue.value = inputDom.value;
+        }
+
+        let handleClickButton = () => {
+            inputValue.value ++;
+        }
+       
+        inputDom.value = inputValue.value;  
+    </script>
+</html>
