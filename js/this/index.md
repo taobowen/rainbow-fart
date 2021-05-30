@@ -16,18 +16,24 @@
 ```
 this.tag = 1;
 let pointFuc = () => {
-    return this.tag;
-},
+        return this.tag;
+    },
     testObject = {
-        tag: 2
+        tag: 2,
+        innerPointFuc: () => {
+            return this.tag;
+        },
+        innerObjectFuc: function () {
+            return this.tag;
+        }
     };
 testObject.objectFuc = pointFuc;
 
 console.log(pointFuc()); // 1
 console.log(testObject.objectFuc()); // 1
+console.log(testObject.innerPointFuc()); // 1
+console.log(testObject.innerObjectFuc()); // 2
 ```
-
-两者都会返回1
 
 ## Example2
 

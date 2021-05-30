@@ -8,6 +8,8 @@
 - [事件循环](./js/eventLoop.index.md)
 - [promise串行](./js/promise/index.md)
 - [原型链](./js/prototype/index.md)
+- [this](./js/this/index.md)
+- [async/await](./js/async/index.md)
 
 ### vue
 
