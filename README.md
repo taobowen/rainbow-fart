@@ -10,6 +10,7 @@
 - [原型链](./js/prototype/index.md)
 - [this](./js/this/index.md)
 - [async/await](./js/async/index.md)
+- [class](./js/class/index.md)
 
 ### vue
 
