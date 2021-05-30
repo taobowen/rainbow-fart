@@ -54,5 +54,12 @@ Object.__proto__              //Function.prototype
 - Object在Function的原型链上，换句话说Function继承了Object
 - 不管是Object、String、Number、Function本身都是构造函数，既然是函数，原型对象当然都是Function.prototype
 
+## 判断一个变量是否为数组
+
+1. arr instanceof Array
+2. arr.constructor === Array
+3. arr.push && !arr.hasOwnProperty('push')
+4. Array.prototype.isPrototypeOf(arr)
+
 
 
