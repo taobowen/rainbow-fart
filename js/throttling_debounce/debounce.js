@@ -1,16 +1,14 @@
-function debounce (func, time) {
-    let timeTag;
-    return () => {
-        if (!timeTag) {
-            func(...arguments);
-            timeTag = setTimeout(() => {
-                timeTag = null;
-            }, time)
-            return;
+function debounce (fuc, delay) {
+    let timer;
+    return function () {
+        let arg = arguments,
+            _this = this;
+        if (timer) {
+            clearTimeout(timer);
         }
-
-        timeTag = setTimeout(() => {
-            timeTag = null;
-        }, time)
+        timer = setTimeout(() => {
+            fuc.apply(_this, ...arg);
+            clearTimeout(timer);
+        }, delay);
     }
 }

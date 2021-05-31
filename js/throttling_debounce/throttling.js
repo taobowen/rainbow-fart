@@ -1,17 +1,11 @@
-function throttling (func, time) {
-    let lastTime,
+function throttling (fuc, delay) {
+    let lastTime;
     return () => {
-        if (!lastTime) {
+        let newTime = Date.now(),
+            _this = this;
+        if (!lastTime || newTime - lastTime > delay) {
             lastTime = Date.now();
-            func(...arguments);
-            return;
-        }
-
-        let newTime = Date.now();
-
-        if (newTime - lastTime >= time) {
-            func(...arguments);
-            lastTime = newTime;
+            fuc.apply(_this, ...arguments);
         }
     }
 }
