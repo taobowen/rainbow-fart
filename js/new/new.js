@@ -1,5 +1,5 @@
 function newObject (fuc) {
-    let initObject = Object.create(fuc.protoType);
+    let initObject = Object.create(fuc.prototype);
 
     let newObject = fuc.bind(initObject)();
         
