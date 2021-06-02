@@ -16,10 +16,11 @@
 
 - [双向绑定](./vue/two_bind/index.md)
 
-### webpack
+### 工程化
 
-- [webpack基本配置](./webpack/basic_option/index.md)
-- [webpack基本原理](./webpack/basic_principle/index.md)
+- [webpack基本配置](./engineering/webpack_option/index.md)
+- [webpack基本原理](./engineering/webpack_principle/index.md)
+- [路由](./engineering/router/index.md)
 
 ### 浏览器
 
