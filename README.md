@@ -11,6 +11,7 @@
 - [this](./js/this/index.md)
 - [async/await](./js/async/index.md)
 - [class](./js/class/index.md)
+- [遍历器](./js/iterator/index.md)
 
 ### vue
 
