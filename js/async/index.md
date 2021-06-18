@@ -77,9 +77,7 @@ let promiseArr = [new Promise((resolve, reject) => {
 async function promiseAll (promiseArr) {
     let output = [];
     promiseArr.forEach(promiseItem => {
-        output.push(new Promise((resolve, reject) => {
-            promiseItem.then(() => resolve());
-        })); 
+        output.push(promiseItem); 
     });
     for (let promiseItem of output) {
         await promiseItem;
@@ -90,3 +88,5 @@ promiseAll(promiseArr).then(() => {
     console.log('finish');
 })
 ```
+
+
