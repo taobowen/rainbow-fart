@@ -12,6 +12,7 @@
 - [async/await](./js/async/index.md)
 - [class](./js/class/index.md)
 - [遍历器](./js/iterator/index.md)
+- [尾调用](./js/tailRecursion/index.md)
 
 ### vue
 
