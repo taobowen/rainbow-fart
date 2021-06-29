@@ -46,3 +46,7 @@
 ### react
 
 - [生命周期](./react/life_cycle/index.md)
+
+### 设计模式
+
+- [发布订阅](./design/publish_subscribe/index.md)
