@@ -21,6 +21,7 @@ resolve: {
 ```
 
 1.2 使用alias添加别名，加快查找模块速度
+
 1.3 合理配置exclude、include
 
 3. 使用缓存，babel-loader、cache-loader，在重新打包的时候利用缓存，提高打包速度，不过webpack5内置了缓存功能

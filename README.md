@@ -6,7 +6,7 @@
 - [定时器](./js/setTimeout/index.md)
 - [new 构造函数](./js/new/index.md)
 - [事件循环](./js/eventLoop/index.md)
-- [promise串行](./js/promise/index.md)
+- [promise](./js/promise/index.md)
 - [原型链](./js/prototype/index.md)
 - [this](./js/this/index.md)
 - [async/await](./js/async/index.md)
