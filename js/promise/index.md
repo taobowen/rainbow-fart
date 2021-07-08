@@ -38,6 +38,7 @@ let promiseArr = [];
 for ( let i = 0; i < 5; i++) {
     promiseArr.push(() => new Promise((resolve, reject) => {
         setTimeout(() => {
+            console.log(i);
             resolve(i);
         }, 1000 * i);
     }));
@@ -47,7 +48,7 @@ function promiseAll(promiseList) {
     // 串行执行promise函数，并且输出值
 }
 
-chainPromise(promiseArr).then(() => {
+promiseAll(promiseArr).then(() => {
     console.log('over');
 });
 
@@ -64,4 +65,36 @@ chainPromise(promiseArr).then(() => {
 
 - [promise.all](./all.js)
 
+### promise.race
 
+```
+let promiseArr = [];
+for ( let i = 0; i < 5; i++) {
+    promiseArr.push(() => new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log(i);
+            resolve(i);
+        }, 1000 * i);
+    }));
+}
+
+function promiseRace(promiseList) {
+    // 串行执行promise函数，并且输出值
+}
+
+promiseRace(promiseArr).then(() => {
+    console.log('over');
+});
+
+// 预计输出如下:
+// 0    (立即输出)
+// over (立即输出)
+// 1    (1秒后输出)
+// 2    (1秒后输出)
+// 3    (1秒后输出)
+// 4    (1秒后输出)
+```
+
+上代码：
+
+- [promise.race](./race.js)
