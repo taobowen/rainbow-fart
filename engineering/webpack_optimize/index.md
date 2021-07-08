@@ -30,6 +30,8 @@ resolve: {
 
 5. 预编译资源模块，三方库代码分离，DllPlugin、DllReferencePlugin，每次更改我本地代码的文件的时候，webpack只需要打包我项目本身的文件代码，而不会再去编译第三方库。
 
+6. 使用es-loader，与vite中的esbuild是一个功能，go语言编写的解析模块，大大提升打包速度
+
 ### 编译体积优化
 
 1. 优化压缩css，清除无用css，optimize-css-assets-webpack-plugin
