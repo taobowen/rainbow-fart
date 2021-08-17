@@ -19,11 +19,6 @@ var module = new Module(filename, parent);
 
 ## 模块加载
 
-1、先计算模块路径
-2、如果模块在缓存里面，取出缓存
-3、加载模块
-4、输出模块的 exports 属性即可
-
 ```
 // require 其实内部调用 Module._load 方法
 Module._load = function(request, parent, isMain) {
@@ -172,3 +167,69 @@ module.exports = {
 
 `module.exports = function () { return 'foo'; };`
 最终，我们强烈建议使用module.exports = xxx的方式来输出模块变量，这样，你只需要记忆一种方法。
+
+## CommonJS与ES的区别
+
+CommonJs模块输出的是一个值的拷贝，ES6模块输出的是值的引用。
+CommonJs模块是运行时加载，ES6模块是编译时输出接口。
+
+### ES
+
+- import命令输入的变量都是只读的
+- import命令具有提升效果
+- import是静态执行，所以不能使用表达式和变量
+- import语句是 Singleton 模式
+
+### CommonJS
+CommonJS 模块的特点如下：
+
+- 所有代码运行在模块作用域，不会污染全局作用域
+- 模块可以多次加载，但是只会在第一次加载时运行一次，然后运行结果就被缓存了，以后再加载，就直接读取缓存结果。要想让模块再次运行，必须清除缓存。
+- 模块加载的顺序，按照其在代码中出现的顺序
+
+加载步骤：
+1、先计算模块路径
+2、如果模块在缓存里面，取出缓存
+3、加载模块
+4、输出模块的 exports 属性即可
+
+### 面试题
+```
+// index.js
+console.log('running index.js');
+import { sum } from './sum.js';
+console.log(sum(1, 2));
+
+// sum.js
+console.log('running sum.js');
+export const sum = (a, b) => a + b;
+```
+
+输出：running sum.js, running index.js, 3
+
+```
+// module.js 
+export default () => "Hello world"
+export const name = "Lydia"
+
+// index.js 
+import * as data from "./module"
+
+console.log(data)
+```
+
+输出：{ default: function default(), name: "Lydia" }
+
+```
+// counter.js
+let counter = 10;
+export default counter;
+// index.js
+import myCounter from "./counter";
+
+myCounter += 1;
+
+console.log(myCounter);
+```
+
+输出：Error
