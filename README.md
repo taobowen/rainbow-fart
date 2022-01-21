@@ -29,6 +29,8 @@
 
 - [浏览器缓存](./browser/cache/index.md)
 - [浏览器原理](./browser/principle/index.md)
+- [Chrome浏览器插件基础](./browser/plugin/basic.md)
+- [Chrome浏览器插件通信及调试](./browser/plugin/message_debug.md)
 
 ### 网络
 
