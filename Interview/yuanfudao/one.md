@@ -1,0 +1,9 @@
+- webpack构建流程，plugin与loader的差别
+- vite的原理，对比webpack与vite之间的优劣
+- 事件循环，出了道题
+- 手写new，出了道题
+- this、指针函数，出了道题
+- weakmap、weakset应用
+- 作用域、作用域链
+- 闭包
+- 算法：最长不重复子串
