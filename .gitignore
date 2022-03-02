@@ -1,0 +1,99 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+
+# production
+/build
+/dist
+
+# misc
+.idea/
+.happypack
+.DS_Store
+.vscode/
+.ice
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+############################
+# NPM files
+############################
+**/node_modules
+**/bower_components
+node_modules
+bower_components
+npm-debug.log*
+
+
+############################
+# Temp files
+############################
+temp
+tmp
+.tmp
+*.swo
+*.swp
+*.swn
+*.swm
+*.diff
+*.log
+*.patch
+*.bak
+*.log
+*.iml
+*.ipr
+*.iws
+*.out
+*.gz
+*#
+*~
+~*
+
+
+############################
+# Editor & OS files
+############################
+.idea
+.DS_STORE
+.Trashes
+.project
+.rebooted
+.*proj
+Thumbs.db
+ehthumbs.db
+Icon?
+nbproject
+
+
+############################
+# Report files
+############################
+coverages
+coverage
+#reports
+#report
+lib-cov
+html-report
+nohup.out
+out
+logs
+log
+
+
+############################
+# Other
+############################
+.node_history
+.svn
+**/tms
+.nodejs-cache
+.node-diamond-client-cache
+node_hsf_config_snapshots
+run
+dist
+build
+.theme
+.ice
