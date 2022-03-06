@@ -1,3 +1,5 @@
+npm开发
+
 ## 初始化
 `npm init`
 填写基础信息
@@ -29,14 +31,14 @@ author: tbw
      }
 }
 ```
-当我们在对应目录下输入output-cli命令时，会执行bin文件夹下的index.js文件
+当我们在对应目录下输入output-cli命令时，会执行bin文件夹下的index.js文件，命令行对应的文件一定要添加后缀
 
 注意对应的index.js文件头部要加上这行脚本声明环境变量`#!/usr/bin/env node`
 
-### npm link
+### 本地调试
 npm link命令可以将一个任意位置的npm包链接到全局执行环境，从而在任意位置使用命令行都可以直接运行该npm包。
-- 为npm包目录创建软链接，将其链到全局文件夹{prefix}/lib/node_modules/<package>
-- 为可执行文件(bin)创建软链接，将其链到{prefix}/bin/{name}
+1. 打开对应的本地npm包目录，先build，在执行npm link，link成功，输出link的地址
+2. 打开对应的项目，执行npm link npm包名，link成功，提示link的地址，如果此时使用了nvm，要保证npm仓库和项目仓库的node版本一致，执行link命令后输入地址一致，就说明本地npm包已经链接到你的项目中了。
 
 ## 发布
 
@@ -116,8 +118,8 @@ script:
 
 ### 构建复杂命令行
 
-- commander
-- terminal-kit
+- commander：用于组织命令行指令（command）和参数（option），它主要负责对命令行的输入信息进行处理。
+- terminal-kit：是一个功能强大的命令行输出工具，支持文本样式、table、menu、进度条等多种交互形式。
 
 ### 测试框架和断言
 
