@@ -18,6 +18,11 @@
 
 - [双向绑定](./vue/two_bind/index.md)
 
+### react
+
+- [生命周期](./react/life_cycle/index.md)
+- [react hook](./react/hook/index.md)
+
 ### 工程化
 
 - [webpack基本配置](./engineering/webpack_option/index.md)
@@ -51,10 +56,6 @@
 - [层叠上下文](./style/layer/index.md)
 - [CSS像素、物理像素、逻辑像素、设备像素比、PPI、Viewport](./style/pixel/index.md)
 - [盒子模型](./style/box/index.md)
-
-### react
-
-- [生命周期](./react/life_cycle/index.md)
 
 ### 设计模式
 
