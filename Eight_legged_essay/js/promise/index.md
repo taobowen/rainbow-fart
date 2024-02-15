@@ -5,6 +5,7 @@ let promiseArr = [];
 for ( let i = 0; i < 5; i++) {
     promiseArr.push(() => new Promise((resolve, reject) => {
         setTimeout(() => {
+            console.log(i);
             resolve(i);
         }, 1000 * i);
     }));
@@ -45,7 +46,7 @@ for ( let i = 0; i < 5; i++) {
 }
 
 function promiseAll(promiseList) {
-    // 串行执行promise函数，并且输出值
+    // 并行执行promise函数，并且输出值
 }
 
 promiseAll(promiseArr).then(() => {
@@ -79,7 +80,7 @@ for ( let i = 0; i < 5; i++) {
 }
 
 function promiseRace(promiseList) {
-    // 串行执行promise函数，并且输出值
+    // 竞态执行promise函数，并且输出值
 }
 
 promiseRace(promiseArr).then(() => {

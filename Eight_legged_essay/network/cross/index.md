@@ -19,7 +19,7 @@
 **1.3 限制范围**
 随着互联网的发展，"同源政策"越来越严格。目前，如果非同源，共有三种行为受到限制。
 
--  Cookie、LocalStorage 和 IndexDB 无法读取。
+- Cookie、LocalStorage 和 IndexDB 无法读取。
 
 - DOM 无法获得。
 
@@ -122,7 +122,7 @@ function checkMessage() {
 
 这个API为window对象新增了一个window.postMessage方法，允许跨窗口通信，不论这两个窗口是否同源。
 
-举例来说，父窗口http ://aaa.com向子窗口http ://bbb.com发消息，调用postMessage方法就可以了。
+举例来说，父窗口http：//aaa.com 向子窗口http：//bbb.com发消息，调用postMessage方法就可以了。
 
 ```
 var popup = window.open('http://bbb.com', 'title');
@@ -339,7 +339,7 @@ Sec-WebSocket-Protocol: chat
 ```
 
 **4.3 CORS**
-        CORS是跨源资源分享（Cross-Origin Resource Sharing）的缩写。它是W3C标准，是跨源AJAX请求的根本解决方法。相比JSONP只能发GET请求，CORS允许任何类型的请求。
+CORS是跨源资源分享（Cross-Origin Resource Sharing）的缩写。它是W3C标准，是跨源AJAX请求的根本解决方法。相比JSONP只能发GET请求，CORS允许任何类型的请求。
 为了使CORS工作，浏览器必须发送一个自定义的HTTP标题，称为Origin,其中包含发送请求的页面协议、域名和端口。例如，如果页面http ://www.abc.com/xyz.html上的JavaScript使用XMLHttpRequest给http ://beginningjs.com发送请求，Origin标题就如下所示：
 
 ` Origin: http ://www.abc.com`
@@ -351,5 +351,3 @@ Sec-WebSocket-Protocol: chat
 如果没有这个标题，或者源不相同，浏览器就不处理请求。
 另外，服务器可以包含值为*的Access-Control-Allow-Origin标题，表示接受所有源。这主要用于可公开的web服务。
 注意： 这些自定义标题由浏览器自动处理，不需要设置自己的Origin标题，也不必手动检查Access-Control-Allow-Origin
-
-### 五、nginx

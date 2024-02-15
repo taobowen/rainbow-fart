@@ -22,7 +22,7 @@
    - 对象中存在function、undefined
    - 对象中存在RegExp对象、Error对象、时间对象
    - 对象中存在NaN
-   - JSON.stringify()只能序列化对象的可枚举的自有属性，例如 如果obj中的对象是有构造函数生成的， 则使用JSON.parse(JSON.stringify(obj))深拷贝后，会丢弃对象的constructor；
+   - JSON.stringify()只能序列化对象的可枚举的自有属性，例如 如果obj中的对象是由构造函数生成的， 则使用JSON.parse(JSON.stringify(obj))深拷贝后，会丢弃对象的constructor；
 
 - 利用递归来实现每一层都重新创建对象并赋值。
 

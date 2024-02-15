@@ -28,6 +28,8 @@
 #### 特点
 - 存储会话数据，数据只会存储到浏览器关闭，但数据不受浏览器刷新影响。
 - sessionStorage主要用于存储只在会话期间有效的小块数据。
+- sessionStorage的作用范围限制在单个窗口或标签页中，不同页面之间的sessionStorage数据是隔离的
+- sessionStorage的容量限制较小，通常在2MB左右。
 
 ### localStorage
 
@@ -35,3 +37,4 @@
 - 跨会话持久存储数据
 - 要访问同一个localStorage对象，页面必须来自同一个域、在相同的端口上使用相同协议
 - 存储在localStorage中的数据会保留到通过js删除或者用户清除浏览器缓存，不会受页面刷新影响，也不会因关闭窗口、标签页或重新启动浏览器而丢失。
+- localStorage的容量限制在5MB到10MB

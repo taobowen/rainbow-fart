@@ -38,10 +38,9 @@ Object.setPrototypeOf()这种行为对性能消耗比较大，通常情况下我
 ## 关于校验
 
 - instanceof：判断某个构造函数是否在它的原型链上
-- hasOwnProperty：判断某个属性是否在实例上
+- hasOwnProperty：判断某个属性是否为实例的自有属性
 - in：判断某个属性能否通过实例或原型访问
 - isPrototypeOf：判断原型链中是否包含某个原型
-
 
 ## 几个比较绕的例子
 ```

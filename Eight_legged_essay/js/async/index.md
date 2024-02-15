@@ -59,34 +59,40 @@ console.log(5);
 let promiseArr = [new Promise((resolve, reject) => {
     this.setTimeout(() => {
         console.log(2);
-        resolve();
+        resolve(2);
     }, 2000);
 }), new Promise((resolve, reject) => {
     this.setTimeout(() => {
         console.log(3);
-        resolve();
+        resolve(3);
     }, 3000);
 }), new Promise((resolve, reject) => {
     this.setTimeout(() => {
         console.log(1);
-        resolve();
+        resolve(1);
     }, 1000);
-})]
+})];
 
 
 async function promiseAll (promiseArr) {
-    let output = [];
+    let promiseList = [],
+        output = [];
     promiseArr.forEach(promiseItem => {
-        output.push(promiseItem); 
+        promiseList.push(promiseItem); 
     });
-    for (let promiseItem of output) {
-        await promiseItem;
+    for (let promiseItem of promiseList) {
+        output.push(await promiseItem);
+        console.log('await');
     }
+
+    return output;
 }
 
-promiseAll(promiseArr).then(() => {
-    console.log('finish');
-})
+promiseAll(promiseArr).then(res => {
+    console.log('finish', res);
+}, err => {
+    console.log('err', err)
+});
 ```
 
 

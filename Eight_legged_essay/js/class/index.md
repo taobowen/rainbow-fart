@@ -82,6 +82,16 @@ B.prototype.__proto__ === A.prototype // true
 ```
 并且上述代码中A只要是一个有prototype属性的函数，就能被B继承。
 
+function A () {
+    this.a = 1;
+}
+
+let B = {
+    b: 1,
+}
+
+A.prototype = B;
+
 ## super
 
 上面示例中super调用的是A的构造函数，但是内部的this指向的是B，即super()在这等价于A.prototype.constructor.call(this)
@@ -146,6 +156,7 @@ class Parent {
 class Child extends Parent {
     static myMethod (msg) {
         super.myMethod(msg);
+        console.log(super.myMethod === Parent.myMethod) // true
     }
 
     myMethod(msg) {

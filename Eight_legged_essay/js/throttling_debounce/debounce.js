@@ -4,11 +4,11 @@ function debounce (fuc, delay) {
         let arg = arguments,
             _this = this;
         if (timer) {
-            clearTimeout(timer);
+            timer = null;
         }
         timer = setTimeout(() => {
-            fuc.apply(_this, ...arg);
-            clearTimeout(timer);
+            fuc.apply(_this, arg);
+            timer = null
         }, delay);
     }
 }
